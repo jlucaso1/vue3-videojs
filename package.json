@@ -4,7 +4,8 @@
   "scripts": {
     "dev": "vite",
     "build": "vue-tsc --noEmit && vite build",
-    "serve": "vite preview"
+    "serve": "vite preview",
+    "deploy:github": "start deploy.cmd"
   },
   "dependencies": {
     "video.js": "^7.14.3",
