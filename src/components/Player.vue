@@ -4,8 +4,12 @@
 
 <script lang="ts">
 import { defineComponent, onMounted, ref, onUnmounted, watch } from "vue";
-import videojs, { VideoJsPlayer } from "video.js";
-import "video.js/dist/video-js.css";
+// Type
+import { VideoJsPlayer } from "video.js";
+// Core lightweight version
+import videojs from "video.js/dist/alt/video.core.novtt.js";
+// Video.js css
+import "video.js/dist/video-js.min.css";
 
 export default defineComponent({
   name: "VideoPlayer",
@@ -20,6 +24,7 @@ export default defineComponent({
     watch(
       () => props.src,
       (val) => {
+        //Reload video source
         player.value?.loadMedia({ src: val, type: "video/mp4" }, () => {});
       }
     );
